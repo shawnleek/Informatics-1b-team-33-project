@@ -8,8 +8,8 @@ Public Class Country
     Private _Population As Integer
     Private _Regions() As Region
     Private _Type As String     'Developed, developing or third world country
-    Private _HIVRate As Double  'Percentage of infected individuals nationally
-    Private _TBRate As Double
+    Private _HIVPercentage As Double  'Percentage of infected individuals nationally
+    Private _TBPercentage  As Double
 
 
     Public Property TBRate As Double
