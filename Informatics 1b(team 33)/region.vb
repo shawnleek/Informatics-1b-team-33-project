@@ -14,6 +14,7 @@ Public Class region
     Private _size As Double
     Private _npopulation As Integer
 
+
     'property methods
     Public Property name As String
         Set(value As String)
