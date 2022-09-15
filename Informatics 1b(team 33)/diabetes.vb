@@ -22,21 +22,6 @@ Public Class diabetes
 
     End Function
 
-    Public Overrides Function totaltreatment() As Integer
 
-        Return 0
-
-    End Function
-
-    Public Overrides Function averagetreatmentdistributed() As Double
-
-        Return 0
-    End Function
-
-    Public Overrides Function totalpercentage() As Double
-
-        Return 0
-
-    End Function
 
 End Class

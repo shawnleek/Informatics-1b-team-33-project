@@ -21,22 +21,7 @@ Public Class country
     Private _diabetesrate As Double
 
 
-    Public Property tbpercentage As Double
-        Set(value As Double)
-            _TBPercentage = value
-        End Set
-        Get
-            Return _TBPercentage
-        End Get
-    End Property
-    Public Property hivpercentage As Double
-        Set(value As Double)
-            _HIVPercentage = value
-        End Set
-        Get
-            Return _HIVPercentage
-        End Get
-    End Property
+
     Public Property TBRate As Double
         Set(value As Double)
             _TBRate = value
