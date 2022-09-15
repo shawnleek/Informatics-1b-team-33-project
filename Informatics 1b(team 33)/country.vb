@@ -19,6 +19,15 @@ Public Class country
     Private _malariarate As Double  'Percentage of infected individuals nationally
     Private _diabetesrate As Double
 
+
+
+    Public Sub New(numregion As Integer)
+        ReDim _regions(numregion)
+        For r As Integer = 1 To numregion
+            _regions(r) = New region
+        Next
+    End Sub
+
     '----------------------------------------------------------------property methods--------------------------------------------------'
 
 
@@ -56,13 +65,6 @@ Public Class country
     End Property
 
 
-
-    Public Sub New(numregion As Integer)
-        ReDim _regions(numregion)
-        For r As Integer = 1 To numregion
-            _regions(r) = New region
-        Next
-    End Sub
 
     Public Property name As String
         Set(value As String)
@@ -102,7 +104,7 @@ Public Class country
             Return _regions(index)
         End Get
         Set(value As region)
-            _regions(index) = value
+            _regions(index ) = value
         End Set
     End Property
 

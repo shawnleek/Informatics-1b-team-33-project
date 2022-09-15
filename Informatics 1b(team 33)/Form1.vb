@@ -8,6 +8,7 @@ Option Explicit On
 Public Class Form1
     Private countries() As country
     Private incrementer As Integer
+
     Private regiontracker() As Integer
     Private risktracker() As String
     Private Sub btnaddcountry_Click(sender As Object, e As EventArgs) Handles btnaddcountry.Click
@@ -22,6 +23,7 @@ Public Class Form1
         regiontracker(incrementer) = numregions
 
         Dim country As New country(numregions)
+
         country.name = InputBox("What is the name of the country ?", "COUNTRY")
         country.classification = InputBox("what is the classification of " & country.name,, "developing")
         country.landsize = CDbl(InputBox("what is the land size of " & country.name))
@@ -40,21 +42,21 @@ Public Class Form1
 
         Next r
 
-        risktracker(incrementer) = country.regions(incrementer + 1).determinecondition(country.regions(incrementer + 1).population)
+
         country.malariacalc(regiontracker(incrementer))
         country.hivratecalc(regiontracker(incrementer))
         country.tbcalc(regiontracker(incrementer))
         country.diabetescalc(regiontracker(incrementer))
         countries(incrementer) = country
-        incrementer += 1
         ListBox1.Items.Add(country.name)
+        incrementer += 1
 
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
 
         ListBox2.Items.Clear()
-        For r As Integer = 1 To regiontracker(r)
+        For r As Integer = 1 To regiontracker(ListBox1.SelectedIndex)
             ListBox2.Items.Add(countries(ListBox1.SelectedIndex).regions(r).name)
         Next
 
@@ -135,7 +137,7 @@ Public Class Form1
         '------------------------------------------------------showing country details -----------------------------------------------------'
         '                                                                                                                                   '
         For c As Integer = 0 To incrementer - 1
-            MsgBox("country name :" & countries(c).name & vbNewLine & "classification :" & countries(c).classification & vbNewLine & "population size :" & countries(c).population & vbNewLine & "HIVAIDS rate :" & Format(countries(c).HIVRate, "0.00") & vbNewLine & "TB rate :" & Format(countries(c).TBRate, "0.00") & vbNewLine & "Diabetes rate :" & Format(countries(c).diabetesrate, "0.00") & vbNewLine & "Malaria rate :" & Format(countries(c).malariarate, "0.00") & vbNewLine & "Risk :" & risktracker(c))
+            MsgBox("country name :" & countries(c).name & vbNewLine & "classification :" & countries(c).classification & vbNewLine & "population size :" & countries(c).population & vbNewLine & "HIVAIDS rate :" & Format(countries(c).HIVRate, "0.00") & vbNewLine & "TB rate :" & Format(countries(c).TBRate, "0.00") & vbNewLine & "Diabetes rate :" & Format(countries(c).diabetesrate, "0.00") & vbNewLine & "Malaria rate :" & Format(countries(c).malariarate, "0.00") & vbNewLine & "Risk :high risk area")
 
         Next
 
