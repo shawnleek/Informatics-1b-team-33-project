@@ -7,14 +7,14 @@ Public Class malaria
     Inherits disease
 
     Public Overrides Function treatment() As String
-        Return "Atovaquone-proguanil,(Oracea, Vibramycin, others) & vbnewline & Primaquine phosphate
+        Return "Atovaquone-proguanil and Primaquine phosphate
 "
 
 
     End Function
 
     Public Overrides Function symptoms() As String
-        Return "fever flu like illness  headache muscle aches & vbnewline & tirednes shaking chills"
+        Return "fever flu like illness  headache muscle aches tirednes shaking chills"
 
 
 
