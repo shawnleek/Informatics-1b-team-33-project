@@ -8,7 +8,7 @@ Public Class TB
 
 
     Public Overrides Function treatment() As String
-        Return "2 antibiotics (isoniazid and rifampicin) for 6 months." & vbNewLine & "additional antibiotics (pyrazinamide and ethambutol) for the first 2 months of the 6-month treatment period."
+        Return "antibiotics,isoniazid, rifampicin and pyrazinamide ."
 
 
     End Function

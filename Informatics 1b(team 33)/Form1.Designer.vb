@@ -83,7 +83,7 @@ Partial Class Form1
         '
         'btnaddcountry
         '
-        Me.btnaddcountry.Location = New System.Drawing.Point(12, 470)
+        Me.btnaddcountry.Location = New System.Drawing.Point(1025, 35)
         Me.btnaddcountry.Name = "btnaddcountry"
         Me.btnaddcountry.Size = New System.Drawing.Size(306, 79)
         Me.btnaddcountry.TabIndex = 5
@@ -103,14 +103,14 @@ Partial Class Form1
         '
         Me.ListBox4.FormattingEnabled = True
         Me.ListBox4.ItemHeight = 20
-        Me.ListBox4.Location = New System.Drawing.Point(16, 261)
+        Me.ListBox4.Location = New System.Drawing.Point(12, 256)
         Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(272, 164)
+        Me.ListBox4.Size = New System.Drawing.Size(249, 164)
         Me.ListBox4.TabIndex = 7
         '
         'btninfor
         '
-        Me.btninfor.Location = New System.Drawing.Point(702, 461)
+        Me.btninfor.Location = New System.Drawing.Point(1025, 341)
         Me.btninfor.Name = "btninfor"
         Me.btninfor.Size = New System.Drawing.Size(306, 79)
         Me.btninfor.TabIndex = 8
@@ -121,7 +121,7 @@ Partial Class Form1
         '
         Me.ListBox5.FormattingEnabled = True
         Me.ListBox5.ItemHeight = 20
-        Me.ListBox5.Location = New System.Drawing.Point(261, 261)
+        Me.ListBox5.Location = New System.Drawing.Point(261, 256)
         Me.ListBox5.Name = "ListBox5"
         Me.ListBox5.Size = New System.Drawing.Size(747, 164)
         Me.ListBox5.TabIndex = 9
@@ -129,7 +129,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 238)
+        Me.Label4.Location = New System.Drawing.Point(12, 233)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 20)
         Me.Label4.TabIndex = 10
@@ -138,7 +138,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(257, 238)
+        Me.Label5.Location = New System.Drawing.Point(257, 233)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 20)
         Me.Label5.TabIndex = 11
@@ -148,7 +148,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1030, 592)
+        Me.ClientSize = New System.Drawing.Size(1471, 452)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ListBox5)

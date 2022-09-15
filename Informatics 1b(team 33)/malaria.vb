@@ -7,7 +7,8 @@ Public Class malaria
     Inherits disease
 
     Public Overrides Function treatment() As String
-        Return "Atovaquone-proguanil (Malarone)" & vbNewLine & " Quinine sulfate (Qualaquin) with doxycycline (Oracea, Vibramycin, others) & vbnewline & Primaquine phosphate"
+        Return "Atovaquone-proguanil,
+(Oracea, Vibramycin, others) & vbnewline & Primaquine phosphate"
 
 
     End Function
