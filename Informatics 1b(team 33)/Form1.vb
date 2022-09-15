@@ -98,9 +98,9 @@ Public Class Form1
         disease(2) = hivaids
         disease(1) = tb
 
-        ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).symptoms & vbNewLine & "TREATMENTS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).treatment)
+        ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).symptoms)
 
-
+        ListBox5.Items.Add("TREATMENTS :"disease(ListBox4.SelectedIndex + 1).treatment)
 
 
     End Sub
