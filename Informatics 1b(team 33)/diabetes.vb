@@ -11,21 +11,13 @@ Public Class diabetes
 
     Public Overrides Function symptoms() As String
 
-        Return "Urinate (pee) a lot, often at night" & vbNewLine & "Lose weight without trying" & vbNewLine & "Are very hungry" & vbNewLine & "Have blurry vision" & vbNewLine & "  Have numb or tingling hands or feet" & vbNewLine & " Have very dry skin..& vb newline"
-
-
-
-
-
+        Return ": Urinate (pee) a lot, often at night Lose weight without trying Are very hungry Have blurry vision Have numb or tingling hands or feet Have very dry skin."
 
 
     End Function
     Public Overrides Function treatment() As String
 
-        Return ": insulin pumps" & vbNewLine & ": weight loss surgery" & vbNewLine & ": diet and exercise " & vbNewLine & ": emotional support"
-
-
-
+        Return ": insulin pumps weight loss surgery diet and exercise  emotional support"
 
 
     End Function

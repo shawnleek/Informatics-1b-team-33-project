@@ -93,14 +93,14 @@ Public Class Form1
         Dim diabetes As New diabetes
         Dim hivaids As New HIVAIDS
         Dim disease(4) As disease
-        disease(4) = malaria
-        disease(3) = diabetes
-        disease(2) = hivaids
-        disease(1) = tb
+        disease(0) = malaria
+        disease(2) = diabetes
+        disease(1) = hivaids
+        disease(3) = tb
 
-        ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).symptoms)
+        ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex).symptoms)
 
-        ListBox5.Items.Add("TREATMENTS :" & disease(ListBox4.SelectedIndex + 1).treatment)
+        ListBox5.Items.Add("TREATMENTS :" & disease(ListBox4.SelectedIndex).treatment)
 
 
     End Sub

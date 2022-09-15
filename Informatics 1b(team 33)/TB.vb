@@ -8,7 +8,7 @@ Public Class TB
 
 
     Public Overrides Function treatment() As String
-        Return "antibiotics,isoniazid, rifampicin and pyrazinamide ."
+        Return "antibiotics,isoniazid, rifampicin and pyrazinamide."
 
 
     End Function
