@@ -23,7 +23,7 @@ Public Class Form1
         country.name = InputBox("What is the name of the country ?", "COUNTRY")
         country.classification = InputBox("what is the classification of " & country.name)
         country.landsize = CDbl(InputBox("what is the land size of " & country.name))
-        country.population = CDbl(InputBox("what is the population of " & country.name))
+        country.population = CInt(InputBox("what is the population of " & country.name))
 
         For r As Integer = 1 To numregions
             country.regions(r).name = InputBox("what is the name of region " & CStr(r))
@@ -59,16 +59,27 @@ Public Class Form1
         ListBox3.Items.Clear()
         ListBox3.Items.Add("name :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).name)
 
-        ListBox3.Items.Add("climate :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).climate)
-        ListBox3.Items.Add("population size :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).population)
-        ListBox3.Items.Add("healthcare facilities :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).numfacilities)
+        ListBox3.Items.Add("Climate :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).climate)
+        ListBox3.Items.Add("Population size :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).population)
+        ListBox3.Items.Add("Healthcare facilities :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).numfacilities)
         ListBox3.Items.Add("HIV/AIDS :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).hivAids)
-        ListBox3.Items.Add("malaria :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).malaria)
-        ListBox3.Items.Add("tuberculosis :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).tb)
-        ListBox3.Items.Add("diabetes" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).diabetes)
+        ListBox3.Items.Add("Malaria :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).malaria)
+        ListBox3.Items.Add("Tuberculosis :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).tb)
+        ListBox3.Items.Add("Diabetes :" & countries(ListBox1.SelectedIndex).regions(ListBox2.SelectedIndex + 1).diabetes)
 
 
     End Sub
 
+    Private Sub btninfor_Click(sender As Object, e As EventArgs) Handles btninfor.Click
+        '---------------------------------------------------addinng diseases into display listbox 4---------------------------------------------------'
+        '                                                                                                                                             '
 
+        ListBox4.Items.Add("malaria")
+        ListBox4.Items.Add("HIV/AIDS")
+        ListBox4.Items.Add("Diabetes")
+        ListBox4.Items.Add("Tuberculosis")
+
+
+
+    End Sub
 End Class

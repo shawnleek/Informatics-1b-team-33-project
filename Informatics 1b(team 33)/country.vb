@@ -56,14 +56,6 @@ Public Class country
 
 
 
-
-
-
-
-
-
-
-
     Public Sub New(numregion As Integer)
         ReDim _regions(numregion)
         For r As Integer = 1 To numregion
@@ -89,8 +81,8 @@ Public Class country
             Return _landsize
         End Get
     End Property
-    Public Property population As Double
-        Set(value As Double)
+    Public Property population As Integer
+        Set(value As Integer)
             _population = value
         End Set
         Get
