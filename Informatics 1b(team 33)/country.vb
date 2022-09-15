@@ -17,8 +17,8 @@ Public Class country
 
     Private _HIVRate As Double  'Percentage of infected individuals nationally
     Private _TBRate As Double
-    Private _HIVPercentage As Double  'Percentage of infected individuals nationally
-    Private _TBPercentage As Double
+    Private _malariarate As Double  'Percentage of infected individuals nationally
+    Private _diabetesrate As Double
 
 
     Public Property tbpercentage As Double
@@ -105,8 +105,38 @@ Public Class country
             _regions(index) = value
         End Set
     End Property
+    Public Function hivratecalc(numregion As Integer) As Double
+        Dim answer As Double
+        For r As Integer = 1 To numregion
 
+            answer += Me.regions(r).hivAids
+        Next
+        Return answer
+    End Function
 
+    Public Function malaria(numregion As Integer) As Double
+        Dim answer As Double
+        For r As Integer = 1 To numregion
+            answer += Me.regions(r).malaria
+        Next
+        Return answer
+    End Function
+
+    Public Function tb(numregion As Integer) As Double
+        Dim answer As Double
+        For r As Integer = 1 To numregion
+            answer += Me.regions(r).tb
+        Next
+        Return answer
+    End Function
+
+    Public Function diabetes(numregion As Integer) As Double
+        Dim answer As Double
+        For r As Integer = 1 To numregion
+            answer += Me.regions(r).diabetes
+        Next
+        Return answer
+    End Function
 
 
 

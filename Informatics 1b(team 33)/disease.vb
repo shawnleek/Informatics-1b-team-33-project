@@ -49,15 +49,5 @@ Public MustInherit Class disease
     Public MustOverride Function treatment() As String
     Public MustOverride Function symptoms() As String
 
-    Public Overridable Function totaltreatment() As Integer
-        Return 0
-    End Function
 
-    Public Overridable Function averagetreatmentdistributed() As Double
-        Return 0
-    End Function
-
-    Public Overridable Function totalpercentage() As Double
-        Return 0
-    End Function
 End Class

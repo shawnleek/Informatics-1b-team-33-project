@@ -104,4 +104,16 @@ Public Class Form1
 
 
     End Sub
+
+    Private Sub btncountrydetails_Click(sender As Object, e As EventArgs) Handles btncountrydetails.Click
+        '------------------------------------------------------showing country details -----------------------------------------------------'
+        '                                                                                                                                   '
+
+
+
+
+
+
+
+    End Sub
 End Class

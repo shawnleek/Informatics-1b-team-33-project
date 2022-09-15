@@ -34,6 +34,7 @@ Partial Class Form1
         Me.ListBox5 = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btncountrydetails = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -144,11 +145,21 @@ Partial Class Form1
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "disease details"
         '
+        'btncountrydetails
+        '
+        Me.btncountrydetails.Location = New System.Drawing.Point(1025, 131)
+        Me.btncountrydetails.Name = "btncountrydetails"
+        Me.btncountrydetails.Size = New System.Drawing.Size(306, 79)
+        Me.btncountrydetails.TabIndex = 12
+        Me.btncountrydetails.Text = "view country details"
+        Me.btncountrydetails.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1471, 452)
+        Me.Controls.Add(Me.btncountrydetails)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ListBox5)
@@ -180,4 +191,5 @@ Partial Class Form1
     Friend WithEvents ListBox5 As ListBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents btncountrydetails As Button
 End Class
