@@ -10,13 +10,13 @@ Public Class HIVAIDS
 
     Public Overrides Function treatment() As String
 
-        Return "pills and shots"
+        Return "pills, ARVs and shots"
 
     End Function
 
     Public Overrides Function symptoms() As String
 
-        Return "Fever Headache Muscle aches and joint pain Rash Sore throat and painful mouth sores Swollen lymph glands, mainly on the neck weight loss"
+        Return "Fever Headache , Sore throat ,painful mouth sores and Swollen lymph glands."
 
     End Function
 End Class

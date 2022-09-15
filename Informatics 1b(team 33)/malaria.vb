@@ -14,7 +14,7 @@ Public Class malaria
     End Function
 
     Public Overrides Function symptoms() As String
-        Return "fever flu like illness  headache muscle aches tirednes shaking chills"
+        Return "fever flu like illness  headache muscle aches tiredness shaking chills"
 
 
 

@@ -11,7 +11,7 @@ Public Class diabetes
 
     Public Overrides Function symptoms() As String
 
-        Return ": Urinate (pee) a lot, often at night Lose weight without trying Are very hungry Have blurry vision Have numb or tingling hands or feet Have very dry skin."
+        Return ": Urinate a lot, Have blurry vision Have numb or feet Have very dry skin."
 
 
     End Function
