@@ -82,4 +82,26 @@ Public Class Form1
 
 
     End Sub
+
+    Private Sub ListBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox4.SelectedIndexChanged
+        '-----------------------------------------viewing details about each disease----------------------------------------------------'
+        '                                                                                                                               '
+
+        ListBox5.Items.Clear()
+        Dim tb As New TB
+        Dim malaria As New malaria
+        Dim diabetes As New diabetes
+        Dim hivaids As New HIVAIDS
+        Dim disease(4) As disease
+        disease(4) = malaria
+        disease(3) = diabetes
+        disease(2) = hivaids
+        disease(1) = tb
+
+        ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).symptoms & vbNewLine & "TREATMENTS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).treatment)
+
+
+
+
+    End Sub
 End Class
