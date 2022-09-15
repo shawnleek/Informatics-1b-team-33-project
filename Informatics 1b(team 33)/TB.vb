@@ -4,9 +4,7 @@ Option Explicit On
 
 Public Class TB
     Inherits disease
-
-
-
+    '---------------------------------------------------------methods----------------------------------------------------------'
     Public Overrides Function treatment() As String
         Return "antibiotics,isoniazid, rifampicin and pyrazinamide."
 

@@ -5,7 +5,7 @@ Option Explicit On
 
 Public Class malaria
     Inherits disease
-
+    '-----------------------------------------------------------------methods-----------------------------------------------------------'
     Public Overrides Function treatment() As String
         Return "Atovaquone-proguanil and Primaquine phosphate
 "

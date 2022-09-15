@@ -1,15 +1,16 @@
-﻿'option statement
+﻿'------------------------------------------------------------option statement----------------------------------------------------'
 Option Infer Off
 Option Explicit On
 Option Strict On
 
 Public Class region
-
+    '--------------------------------------------------------attributes----------------------------------------------------------'
 
     'variables 
     Private _name As String
     Private _climate As String
     Private _type As String
+    Private _numinfected As Integer
     Private _numfacilities As Integer
     Private _size As Double
     Private _npopulation As Integer
@@ -18,7 +19,16 @@ Public Class region
     Private _numpeoplemalaria As Integer
     Private _numpeoplehivaids As Integer
 
-    'property methods
+    '---------------------------------------------------------------property methods-----------------------------------------------------------------'
+    Public Property numinfected As Integer
+        Set(value As Integer)
+            _numinfected = value
+        End Set
+        Get
+            Return _numinfected
+        End Get
+    End Property
+
     Public Property malaria As Integer
         Set(value As Integer)
             _numpeoplemalaria = value
@@ -106,8 +116,5 @@ Public Class region
         End Set
     End Property
 
-    'method
-    Public Function percentage(ninfected As Integer) As Double
-        Return _npopulation / ninfected
-    End Function
+
 End Class

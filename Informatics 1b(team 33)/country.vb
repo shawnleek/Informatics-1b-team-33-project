@@ -19,7 +19,7 @@ Public Class country
     Private _malariarate As Double  'Percentage of infected individuals nationally
     Private _diabetesrate As Double
 
-
+    '----------------------------------------------------------------property methods--------------------------------------------------'
 
     Public Property TBRate As Double
         Set(value As Double)
@@ -63,7 +63,6 @@ Public Class country
         Next
     End Sub
 
-    '---------------------------------------------properties --------------------------------------------'
     Public Property name As String
         Set(value As String)
             _name = value
@@ -105,6 +104,8 @@ Public Class country
             _regions(index) = value
         End Set
     End Property
+
+    '--------------------------------------------------------------------------methods-------------------------------------------------------------------------------------'
     Public Function hivratecalc(numregion As Integer) As Double
         Dim answer As Integer
         For r As Integer = 1 To numregion

@@ -2,12 +2,9 @@
 Option Infer Off
 Option Explicit On
 
-
-
-
 Public Class HIVAIDS
     Inherits disease
-
+    '-------------------------------------------------------------methods ------------------------------------------------------'
     Public Overrides Function treatment() As String
 
         Return "pills, ARVs and shots"

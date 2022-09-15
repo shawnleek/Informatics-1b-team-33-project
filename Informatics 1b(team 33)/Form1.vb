@@ -93,10 +93,23 @@ Public Class Form1
 
         ListBox5.Items.Clear()
         Dim tb As New TB
+        tb.severity = "medium severe"
+        tb.type = "lung disease"
+        tb.cause = "smoke ,cigarretes and toxic gases"
         Dim malaria As New malaria
+        malaria.severity = "very severe"
+        malaria.type = "stomach disease"
+        malaria.cause = "dirty enviroments "
         Dim diabetes As New diabetes
+        diabetes.severity = "severe"
+        diabetes.type = "Body disease"
+        diabetes.cause = "sugar etc"
         Dim hivaids As New HIVAIDS
+        hivaids.severity = "medium severe"
+        hivaids.type = "immune system"
+        hivaids.cause = "unprotected sex "
         Dim disease(4) As disease
+
         disease(0) = malaria
         disease(2) = diabetes
         disease(1) = hivaids
@@ -105,8 +118,9 @@ Public Class Form1
         ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex).symptoms)
 
         ListBox5.Items.Add("TREATMENTS :" & disease(ListBox4.SelectedIndex).treatment)
-
-
+        ListBox5.Items.Add("Severity :" & disease(ListBox4.SelectedIndex).severity)
+        ListBox5.Items.Add("Type :" & disease(ListBox4.SelectedIndex).type)
+        ListBox5.Items.Add("Cause :" & disease(ListBox4.SelectedIndex).cause)
     End Sub
 
     Private Sub btncountrydetails_Click(sender As Object, e As EventArgs) Handles btncountrydetails.Click
