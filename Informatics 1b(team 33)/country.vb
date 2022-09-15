@@ -21,6 +21,7 @@ Public Class country
 
     '----------------------------------------------------------------property methods--------------------------------------------------'
 
+
     Public Property TBRate As Double
         Set(value As Double)
             _TBRate = value
@@ -144,6 +145,7 @@ Public Class country
         Next
         Return _diabetesrate
     End Function
+
 
 
 

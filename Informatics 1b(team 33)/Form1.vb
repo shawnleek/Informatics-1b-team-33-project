@@ -9,33 +9,37 @@ Public Class Form1
     Private countries() As country
     Private incrementer As Integer
     Private regiontracker() As Integer
+    Private risktracker() As String
     Private Sub btnaddcountry_Click(sender As Object, e As EventArgs) Handles btnaddcountry.Click
 
         ReDim Preserve countries(incrementer)
         ReDim Preserve regiontracker(incrementer)
+        ReDim Preserve risktracker(incrementer)
         Dim numregions As Integer
 
-        numregions = CInt(InputBox("how many regions are available for country "))
+        numregions = CInt(InputBox("how many regions are available for the country "))
 
         regiontracker(incrementer) = numregions
 
         Dim country As New country(numregions)
         country.name = InputBox("What is the name of the country ?", "COUNTRY")
-        country.classification = InputBox("what is the classification of " & country.name)
+        country.classification = InputBox("what is the classification of " & country.name,, "developing")
         country.landsize = CDbl(InputBox("what is the land size of " & country.name))
         country.population = CInt(InputBox("what is the population of " & country.name))
 
         For r As Integer = 1 To numregions
             country.regions(r).name = InputBox("what is the name of region " & CStr(r))
             country.regions(r).population = CInt(InputBox("what is the population of " & country.regions(r).name))
-            country.regions(r).climate = InputBox("how is the climate in " & country.regions(r).name)
+            country.regions(r).climate = InputBox("how is the climate in " & country.regions(r).name,, "cold")
             country.regions(r).size = CDbl(InputBox("what is the size of " & country.regions(r).name))
             country.regions(r).numfacilities = CInt(InputBox("how many healthcare facilities are available in " & country.regions(r).name))
             country.regions(r).hivAids = CInt(InputBox("how many people are living with HIV/AIDS :"))
             country.regions(r).malaria = CInt(InputBox("how many people are living with MALARIA : "))
             country.regions(r).diabetes = CInt(InputBox("how many people are living with DIABETES"))
             country.regions(r).tb = CInt(InputBox("how many people are living with TUBERCULOSIS"))
-        Next
+            risktracker(r - 1) = country.regions(r).determinecondition(country.regions(r).population)
+        Next r
+
         country.malariacalc(regiontracker(incrementer))
         country.hivratecalc(regiontracker(incrementer))
         country.tbcalc(regiontracker(incrementer))
@@ -121,13 +125,14 @@ Public Class Form1
         ListBox5.Items.Add("Severity :" & disease(ListBox4.SelectedIndex).severity)
         ListBox5.Items.Add("Type :" & disease(ListBox4.SelectedIndex).type)
         ListBox5.Items.Add("Cause :" & disease(ListBox4.SelectedIndex).cause)
+
     End Sub
 
     Private Sub btncountrydetails_Click(sender As Object, e As EventArgs) Handles btncountrydetails.Click
         '------------------------------------------------------showing country details -----------------------------------------------------'
         '                                                                                                                                   '
         For c As Integer = 0 To incrementer - 1
-            MsgBox("country name :" & countries(c).name & vbNewLine & "classification :" & countries(c).classification & vbNewLine & "population size :" & countries(c).population & vbNewLine & "HIVAIDS rate :" & Format(countries(c).HIVRate, "0.00") & vbNewLine & "TB rate :" & Format(countries(c).TBRate, "0.00") & vbNewLine & "Diabetes rate :" & Format(countries(c).diabetesrate, "0.00") & vbNewLine & "Malaria rate :" & Format(countries(c).malariarate, "0.00"))
+            MsgBox("country name :" & countries(c).name & vbNewLine & "classification :" & countries(c).classification & vbNewLine & "population size :" & countries(c).population & vbNewLine & "HIVAIDS rate :" & Format(countries(c).HIVRate, "0.00") & vbNewLine & "TB rate :" & Format(countries(c).TBRate, "0.00") & vbNewLine & "Diabetes rate :" & Format(countries(c).diabetesrate, "0.00") & vbNewLine & "Malaria rate :" & Format(countries(c).malariarate, "0.00") & vbNewLine & "Risk :" & risktracker(c))
 
         Next
 

@@ -19,7 +19,20 @@ Public Class region
     Private _numpeoplemalaria As Integer
     Private _numpeoplehivaids As Integer
 
+
     '---------------------------------------------------------------property methods-----------------------------------------------------------------'
+    Public Function determinecondition(numpopulation As Integer) As String
+
+        Dim total As Integer = Me.hivAids + Me.malaria + Me.tb + Me.malaria
+        If numpopulation > total Then
+            Return "Not a high risk area"
+        Else
+            Return "High risk area"
+        End If
+
+    End Function
+
+
     Public Property numinfected As Integer
         Set(value As Integer)
             _numinfected = value
