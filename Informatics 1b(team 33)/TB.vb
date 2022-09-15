@@ -3,25 +3,17 @@ Option Strict On
 Option Explicit On
 
 Public Class TB
-    Private _isoniazid As Integer = 50000
-    Private _pyrazinamid As Integer = 100000
-    Private _ethambutol As Integer = 10000
+    Inherits disease
 
-    Public ReadOnly Property isoniazid As Integer
-        Get
-            Return _isoniazid
-        End Get
-    End Property
 
-    Public ReadOnly Property pyrazinamid As Integer
-        Get
-            Return _pyrazinamid
-        End Get
-    End Property
 
-    Public ReadOnly Property ethambutol As Integer
-        Get
-            Return _ethambutol
-        End Get
-    End Property
+    Public Overrides Function treatment() As String
+        Return "2 antibiotics (isoniazid and rifampicin) for 6 months.
+                2 additional antibiotics (pyrazinamide and ethambutol) for the first 2 months of the 6-month treatment period.
+               "
+    End Function
+
+    Public Overrides Function symptoms() As String
+        Return "feelings of sickness or weakness, weight loss, fever, and night sweats. "
+    End Function
 End Class

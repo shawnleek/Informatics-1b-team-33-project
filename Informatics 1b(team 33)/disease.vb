@@ -46,6 +46,9 @@ Public MustInherit Class disease
         End Set
     End Property
 
+    Public MustOverride Function treatment() As String
+    Public MustOverride Function symptoms() As String
+
     Public Overridable Function totaltreatment() As Integer
         Return 0
     End Function

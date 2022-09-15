@@ -5,7 +5,7 @@ Option Strict On
 
 Public Class region
 
-    Private _diseases() As disease
+
     'variables 
     Private _name As String
     Private _climate As String
@@ -13,26 +13,55 @@ Public Class region
     Private _numfacilities As Integer
     Private _size As Double
     Private _npopulation As Integer
-
+    Private _numpeoplediabetes As Integer
+    Private _numpeopletb As Integer
+    Private _numpeoplemalaria As Integer
+    Private _numpeoplehivaids As Integer
 
     'property methods
+    Public Property malaria As Integer
+        Set(value As Integer)
+            _numpeoplemalaria = value
+        End Set
+        Get
+            Return _numpeoplemalaria
+        End Get
+    End Property
+    Public Property tb As Integer
+        Set(value As Integer)
+            _numpeopletb = value
+        End Set
+        Get
+            Return _numpeopletb
+        End Get
+    End Property
+    Public Property hivAids As Integer
+        Set(value As Integer)
+            _numpeoplehivaids = value
+        End Set
+        Get
+            Return _numpeoplehivaids
+        End Get
+    End Property
+
+    Public Property diabetes As Integer
+        Set(value As Integer)
+            _numpeoplediabetes = value
+        End Set
+        Get
+            Return _numpeoplediabetes
+        End Get
+    End Property
     Public Property name As String
         Set(value As String)
-            _name = name
+            _name = value
         End Set
         Get
             Return _name
         End Get
     End Property
 
-    Public Property diseases(index As Integer) As disease
-        Get
-            Return _diseases(index)
-        End Get
-        Set(value As disease)
-            _diseases(index) = value
-        End Set
-    End Property
+
     Public Property climate As String
         Get
             Return _climate
