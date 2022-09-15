@@ -100,7 +100,7 @@ Public Class Form1
 
         ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex + 1).symptoms)
 
-        ListBox5.Items.Add("TREATMENTS :"disease(ListBox4.SelectedIndex + 1).treatment)
+        ListBox5.Items.Add("TREATMENTS :" & disease(ListBox4.SelectedIndex + 1).treatment)
 
 
     End Sub
