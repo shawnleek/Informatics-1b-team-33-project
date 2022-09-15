@@ -37,15 +37,15 @@ Public Class Form1
             country.regions(r).malaria = CInt(InputBox("how many people are living with MALARIA : "))
             country.regions(r).diabetes = CInt(InputBox("how many people are living with DIABETES"))
             country.regions(r).tb = CInt(InputBox("how many people are living with TUBERCULOSIS"))
-            risktracker(r - 1) = country.regions(r).determinecondition(country.regions(r).population)
+
         Next r
 
+        risktracker(incrementer) = country.regions(incrementer + 1).determinecondition(country.regions(incrementer + 1).population)
         country.malariacalc(regiontracker(incrementer))
         country.hivratecalc(regiontracker(incrementer))
         country.tbcalc(regiontracker(incrementer))
         country.diabetescalc(regiontracker(incrementer))
         countries(incrementer) = country
-
         incrementer += 1
         ListBox1.Items.Add(country.name)
 
@@ -118,10 +118,13 @@ Public Class Form1
         disease(2) = diabetes
         disease(1) = hivaids
         disease(3) = tb
-
+        '---------------------------------------------------------------------polymorphism-------------------------------------------------------------------------------'
         ListBox5.Items.Add("SYMPTOMS :" & vbNewLine & disease(ListBox4.SelectedIndex).symptoms)
 
         ListBox5.Items.Add("TREATMENTS :" & disease(ListBox4.SelectedIndex).treatment)
+        '----------------------------------------------------------------------------------------------------------------------------------------------------------------'
+
+
         ListBox5.Items.Add("Severity :" & disease(ListBox4.SelectedIndex).severity)
         ListBox5.Items.Add("Type :" & disease(ListBox4.SelectedIndex).type)
         ListBox5.Items.Add("Cause :" & disease(ListBox4.SelectedIndex).cause)
