@@ -36,8 +36,12 @@ Public Class Form1
             country.regions(r).diabetes = CInt(InputBox("how many people are living with DIABETES"))
             country.regions(r).tb = CInt(InputBox("how many people are living with TUBERCULOSIS"))
         Next
-
+        country.malariacalc(regiontracker(incrementer))
+        country.hivratecalc(regiontracker(incrementer))
+        country.tbcalc(regiontracker(incrementer))
+        country.diabetescalc(regiontracker(incrementer))
         countries(incrementer) = country
+
         incrementer += 1
         ListBox1.Items.Add(country.name)
 
@@ -108,9 +112,10 @@ Public Class Form1
     Private Sub btncountrydetails_Click(sender As Object, e As EventArgs) Handles btncountrydetails.Click
         '------------------------------------------------------showing country details -----------------------------------------------------'
         '                                                                                                                                   '
+        For c As Integer = 0 To incrementer - 1
+            MsgBox("country name :" & countries(c).name & vbNewLine & "classification :" & countries(c).classification & vbNewLine & "population size :" & countries(c).population & vbNewLine & "HIVAIDS rate :" & Format(countries(c).HIVRate, "0.00") & vbNewLine & "TB rate :" & Format(countries(c).TBRate, "0.00") & vbNewLine & "Diabetes rate :" & Format(countries(c).diabetesrate, "0.00") & vbNewLine & "Malaria rate :" & Format(countries(c).malariarate, "0.00"))
 
-
-
+        Next
 
 
 

@@ -14,7 +14,6 @@ Public Class country
     Private _population As Integer
     Private _classification As String
     Private _regions() As region
-
     Private _HIVRate As Double  'Percentage of infected individuals nationally
     Private _TBRate As Double
     Private _malariarate As Double  'Percentage of infected individuals nationally
@@ -36,6 +35,22 @@ Public Class country
         End Set
         Get
             Return _HIVRate
+        End Get
+    End Property
+    Public Property malariarate As Double
+        Set(value As Double)
+            _malariarate = value
+        End Set
+        Get
+            Return _malariarate
+        End Get
+    End Property
+    Public Property diabetesrate As Double
+        Set(value As Double)
+            _diabetesrate = value
+        End Set
+        Get
+            Return _diabetesrate
         End Get
     End Property
 
@@ -91,36 +106,42 @@ Public Class country
         End Set
     End Property
     Public Function hivratecalc(numregion As Integer) As Double
-        Dim answer As Double
+        Dim answer As Integer
         For r As Integer = 1 To numregion
 
             answer += Me.regions(r).hivAids
+            _HIVRate = (answer / Me._population) * 100
         Next
-        Return answer
+        Return _HIVRate
     End Function
 
-    Public Function malaria(numregion As Integer) As Double
-        Dim answer As Double
+    Public Function malariacalc(numregion As Integer) As Double
+        Dim answer As Integer
         For r As Integer = 1 To numregion
+
             answer += Me.regions(r).malaria
+            _malariarate = (answer / Me._population) * 100
         Next
-        Return answer
+        Return _malariarate
     End Function
 
-    Public Function tb(numregion As Integer) As Double
-        Dim answer As Double
+    Public Function tbcalc(numregion As Integer) As Double
+        Dim answer As Integer
         For r As Integer = 1 To numregion
             answer += Me.regions(r).tb
+            _TBRate = (answer / Me.population) * 100
         Next
-        Return answer
+        Return _TBRate
     End Function
 
-    Public Function diabetes(numregion As Integer) As Double
-        Dim answer As Double
+    Public Function diabetescalc(numregion As Integer) As Double
+        Dim answer As Integer
         For r As Integer = 1 To numregion
             answer += Me.regions(r).diabetes
+
+            _diabetesrate = (answer / Me._population) * 100
         Next
-        Return answer
+        Return _diabetesrate
     End Function
 
 
